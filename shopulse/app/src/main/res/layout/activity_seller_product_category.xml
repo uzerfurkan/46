@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sellers.SellersProductCategoryActivity">
+
+
+    <TextView
+        android:id="@+id/slogan_kategori"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Yeni Ürün Ekle"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
+
+
+    <LinearLayout
+    android:id="@+id/linear1_kategori_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/slogan_kategori"
+    android:orientation="horizontal"
+    android:layout_centerHorizontal="true"
+    android:gravity="center"
+    android:layout_marginTop="100dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <ImageView
+        android:id="@+id/t_shirt"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/tshirt"
+        />
+
+    <ImageView
+        android:id="@+id/sports_t_shirt"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/sports"
+        />
+
+    <ImageView
+        android:id="@+id/kadın_elbise"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/elbise"
+        />
+
+    <ImageView
+        android:id="@+id/mont"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/mont"
+        />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2_kategori_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear1_kategori_layout"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/gozluk"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/gozluk"
+            />
+
+        <ImageView
+            android:id="@+id/canta"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/canta"
+            />
+
+        <ImageView
+            android:id="@+id/sapka"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/sapka"
+            />
+
+        <ImageView
+            android:id="@+id/ayakkabi"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ayakkabi"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3_kategori_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear2_kategori_layout"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/kulaklik"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/kulaklik"
+            />
+
+        <ImageView
+            android:id="@+id/laptop"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/laptop"
+            />
+
+        <ImageView
+            android:id="@+id/saat"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/saat"
+            />
+
+        <ImageView
+            android:id="@+id/telefon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/telefon"
+            />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
