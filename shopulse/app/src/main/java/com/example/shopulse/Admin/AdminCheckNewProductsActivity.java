@@ -67,6 +67,7 @@ public class AdminCheckNewProductsActivity extends AppCompatActivity
                         productViewHolder.txtProductPrice.setText("Fiyat =  " + products.getPrice() + "₺");
                         Picasso.get().load(products.getImage()).into(productViewHolder.imageView);
 
+
                         productViewHolder.itemView.setOnClickListener(new View.OnClickListener()
                         {
                             @Override
@@ -101,6 +102,8 @@ public class AdminCheckNewProductsActivity extends AppCompatActivity
                                 builder.show();
                             }
                         });
+
+
                     }
 
                     @NonNull
@@ -119,13 +122,16 @@ public class AdminCheckNewProductsActivity extends AppCompatActivity
 
     private void ChangeProductState(String productID)
     {
-        unverifiedProducts.child(productID).child("productState").setValue("Onaylandı").addOnCompleteListener(new OnCompleteListener<Void>()
-        {
-            @Override
-            public void onComplete(@NonNull Task<Void> task)
+            unverifiedProducts.child(productID)
+                    .child("productState")
+                    .setValue("Onaylandı")
+                    .addOnCompleteListener(new OnCompleteListener<Void>()
             {
-                Toast.makeText(AdminCheckNewProductsActivity.this, "Ürün satışa hazır", Toast.LENGTH_SHORT).show();
-            }
-        });
+                @Override
+                public void onComplete(@NonNull Task<Void> task)
+                {
+                    Toast.makeText(AdminCheckNewProductsActivity.this, "Ürün satışa sunulmaya hazır.", Toast.LENGTH_SHORT).show();
+                }
+            });
     }
 }
