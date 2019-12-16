@@ -26,17 +26,18 @@
                     android:id="@+id/close_settings_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:text="Kapat"
+                    android:text="Close"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    />
 
                 <TextView
                     android:id="@+id/update_account_settings_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ayarla"
+                    android:text="Update"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -64,7 +65,7 @@
         android:id="@+id/profile_image_change_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profil Resmini Değiştir"
+        android:text="Change Profile Image"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -79,8 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/profile_image_change_btn"
-        android:hint="Sipariş için telefon Numaranız
-"
+        android:hint="Phone Number.."
         android:layout_margin="15dp"
         android:padding="10dp"
         />
@@ -89,7 +89,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/settings_phone_number"
-        android:hint="Ad - Soyad"
+        android:hint="Full Name.."
         android:layout_margin="15dp"
         android:padding="10dp"
         />
@@ -98,7 +98,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/settings_full_name"
-        android:hint="Adresiniz"
+        android:hint="Address.."
         android:layout_margin="15dp"
         android:padding="10dp"
         />

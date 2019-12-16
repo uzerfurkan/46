@@ -118,7 +118,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
 
         recyclerView = findViewById(R.id.recycler_menu);
-        recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
@@ -265,6 +264,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
                 Intent intent = new Intent(HomeActivity.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
                 finish();
             }
 

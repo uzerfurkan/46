@@ -36,7 +36,6 @@ import androidx.recyclerview.widget.RecyclerView;
 public class SellerHomeActivity extends AppCompatActivity
 {
     private TextView mTextMessage;
-
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     private DatabaseReference unverifiedProducts;
@@ -49,7 +48,8 @@ public class SellerHomeActivity extends AppCompatActivity
             switch(menuItem.getItemId())
             {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    Intent intentHome = new Intent(SellerHomeActivity.this, SellerHomeActivity.class);
+                    startActivity(intentHome);
                 return true;
 
                 case R.id.navigation_add:
@@ -77,10 +77,15 @@ public class SellerHomeActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_home);
-
         BottomNavigationView navView = findViewById(R.id.nav_view);
         mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.navigation_home, R.id.navigation_add, R.id.navigation_logout)
+                .build();
+
+
 
         unverifiedProducts = FirebaseDatabase.getInstance().getReference().child("Products");
 
@@ -88,20 +93,10 @@ public class SellerHomeActivity extends AppCompatActivity
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_add, R.id.navigation_logout)
-                .build();
-        /*NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navView, navController);*/
     }
 
     @Override
-    protected void onStart()
-    {
+    protected void onStart() {
         super.onStart();
 
         FirebaseRecyclerOptions<Products> options =
@@ -113,16 +108,15 @@ public class SellerHomeActivity extends AppCompatActivity
                 new FirebaseRecyclerAdapter<Products, ItemViewHolder>(options)
                 {
                     @Override
-                    protected void onBindViewHolder(@NonNull ItemViewHolder itemViewHolder, int i, @NonNull final Products products)
+                    protected void onBindViewHolder(@NonNull ItemViewHolder productViewHolder, int i, @NonNull final Products products)
                     {
-                        itemViewHolder.txtProductName.setText(products.getPname());
-                        itemViewHolder.txtProductDescription.setText(products.getDescription());
-                        itemViewHolder.txtProductStatus.setText("Durumu: " + products.getProductState());
-                        itemViewHolder.txtProductPrice.setText("Fiyat =  " + products.getPrice() + "₺");
-                        Picasso.get().load(products.getImage()).into(itemViewHolder.imageView);
+                        productViewHolder.txtProductName.setText(products.getPname());
+                        productViewHolder.txtProductDescription.setText(products.getDescription());
+                        productViewHolder.txtProductStatus.setText("State:  " + products.getProductState());
+                        productViewHolder.txtProductPrice.setText("Fiyat =  " + products.getPrice() + "₺");
+                        Picasso.get().load(products.getImage()).into(productViewHolder.imageView);
 
-
-                        itemViewHolder.itemView.setOnClickListener(new View.OnClickListener()
+                        productViewHolder.itemView.setOnClickListener(new View.OnClickListener()
                         {
                             @Override
                             public void onClick(View v)
@@ -156,8 +150,6 @@ public class SellerHomeActivity extends AppCompatActivity
                                 builder.show();
                             }
                         });
-
-
                     }
 
                     @NonNull
@@ -174,17 +166,19 @@ public class SellerHomeActivity extends AppCompatActivity
         adapter.startListening();
     }
 
+
+
     private void deleteProduct(String productID)
     {
-        unverifiedProducts.child( productID)
+        unverifiedProducts.child(productID)
                 .removeValue()
                 .addOnCompleteListener(new OnCompleteListener<Void>()
-                {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task)
-                    {
-                        Toast.makeText(SellerHomeActivity.this, "Ürün, başarılı bir şekilde silindi", Toast.LENGTH_SHORT).show();
-                    }
-                });
+        {
+            @Override
+            public void onComplete(@NonNull Task<Void> task)
+            {
+                Toast.makeText(SellerHomeActivity.this, "Ürün Başarılı Bir Şekilde Silindi", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

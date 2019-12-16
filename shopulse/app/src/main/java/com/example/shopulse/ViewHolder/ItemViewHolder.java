@@ -18,11 +18,11 @@ public class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnCl
     public ImageView imageView;
     public ItemClickListener listener;
 
-    public ItemViewHolder(@NonNull View itemView)
+    public ItemViewHolder( android.view.View itemView)
     {
         super(itemView);
-        imageView = (ImageView) itemView.findViewById(R.id.seller_product_image);
-        txtProductName = (TextView) itemView.findViewById(R.id.product_seller_name);
+        imageView = (ImageView) itemView.findViewById(R.id.product_seller_image);
+        txtProductName = (TextView) itemView.findViewById(R.id.seller_product_name);
         txtProductDescription = (TextView) itemView.findViewById(R.id.product_seller_description);
         txtProductPrice = (TextView) itemView.findViewById(R.id.product_seller_price);
         txtProductStatus = (TextView) itemView.findViewById(R.id.seller_product_state);
@@ -40,4 +40,3 @@ public class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         listener.onClick(view, getAdapterPosition(), false);
     }
 }
-
