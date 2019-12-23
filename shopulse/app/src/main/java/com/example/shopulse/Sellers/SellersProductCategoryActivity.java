@@ -49,7 +49,7 @@ public class SellersProductCategoryActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(SellersProductCategoryActivity.this, SellerAddNewProductActivity.class);
-                intent.putExtra("category", "tShirts");
+                intent.putExtra("category", "Araba");
                 startActivity(intent);
             }
         });
@@ -60,7 +60,7 @@ public class SellersProductCategoryActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(SellersProductCategoryActivity.this, SellerAddNewProductActivity.class);
-                intent.putExtra("category", "Sports tShirts");
+                intent.putExtra("category", "Elektronik");
                 startActivity(intent);
             }
         });
@@ -70,7 +70,7 @@ public class SellersProductCategoryActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(SellersProductCategoryActivity.this, SellerAddNewProductActivity.class);
-                intent.putExtra("category", "Female Dresses");
+                intent.putExtra("category", "Giyim&Aksesuar");
                 startActivity(intent);
             }
         });
@@ -80,7 +80,7 @@ public class SellersProductCategoryActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(SellersProductCategoryActivity.this, SellerAddNewProductActivity.class);
-                intent.putExtra("category", "Sweather");
+                intent.putExtra("category", "Motosiklet");
                 startActivity(intent);
             }
         });
@@ -90,7 +90,7 @@ public class SellersProductCategoryActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(SellersProductCategoryActivity.this, SellerAddNewProductActivity.class);
-                intent.putExtra("category", "Glasses");
+                intent.putExtra("category", "Kitap&Dergi");
                 startActivity(intent);
             }
         });
@@ -100,7 +100,7 @@ public class SellersProductCategoryActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(SellersProductCategoryActivity.this, SellerAddNewProductActivity.class);
-                intent.putExtra("category", "Hats Caps");
+                intent.putExtra("category", "Bebek&Çocuk");
                 startActivity(intent);
             }
         });
@@ -110,7 +110,7 @@ public class SellersProductCategoryActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(SellersProductCategoryActivity.this, SellerAddNewProductActivity.class);
-                intent.putExtra("category", "Wallets Bags Purses");
+                intent.putExtra("category", "Ev&Bahçe");
                 startActivity(intent);
             }
         });
@@ -120,7 +120,7 @@ public class SellersProductCategoryActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(SellersProductCategoryActivity.this, SellerAddNewProductActivity.class);
-                intent.putExtra("category", "Shoes");
+                intent.putExtra("category", "Müzik&Plak");
                 startActivity(intent);
             }
         });
@@ -130,7 +130,7 @@ public class SellersProductCategoryActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(SellersProductCategoryActivity.this, SellerAddNewProductActivity.class);
-                intent.putExtra("category", "HeadPhones HandFree");
+                intent.putExtra("category", "Ayakkabı&Çanta");
                 startActivity(intent);
             }
         });
@@ -140,7 +140,7 @@ public class SellersProductCategoryActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(SellersProductCategoryActivity.this, SellerAddNewProductActivity.class);
-                intent.putExtra("category", "Laptops");
+                intent.putExtra("category", "Emlak");
                 startActivity(intent);
             }
         });
@@ -150,7 +150,7 @@ public class SellersProductCategoryActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(SellersProductCategoryActivity.this, SellerAddNewProductActivity.class);
-                intent.putExtra("category", "Watches");
+                intent.putExtra("category", "Spor&Eğlence");
                 startActivity(intent);
             }
         });
@@ -160,7 +160,7 @@ public class SellersProductCategoryActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(SellersProductCategoryActivity.this, SellerAddNewProductActivity.class);
-                intent.putExtra("category", "Mobile Phones");
+                intent.putExtra("category", "Kozmetik");
                 startActivity(intent);
             }
         });

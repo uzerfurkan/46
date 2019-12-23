@@ -81,7 +81,7 @@ public class AdminMaintainProductsActivity extends AppCompatActivity
             @Override
             public void onComplete(@NonNull Task<Void> task)
             {
-                Intent intent = new Intent(AdminMaintainProductsActivity.this, SellersProductCategoryActivity.class);
+                Intent intent = new Intent(AdminMaintainProductsActivity.this, AdminHomeActivity.class);
                 startActivity(intent);
                 finish();
 

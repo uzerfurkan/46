@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -203,6 +204,7 @@ public class ResetPasswordActivity extends AppCompatActivity
                                 final EditText newPassword = new EditText(ResetPasswordActivity.this);
                                 newPassword.setHint("Yeni şifrenizi buraya yazın");
                                 builder.setView(newPassword);
+                                newPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
                                 builder.setPositiveButton("Değiştir", new DialogInterface.OnClickListener()
                                 {

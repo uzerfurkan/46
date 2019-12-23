@@ -38,14 +38,14 @@
         android:id="@+id/t_shirt"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/tshirt"
+        android:src="@drawable/car"
         />
 
     <ImageView
         android:id="@+id/sports_t_shirt"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/sports"
+        android:src="@drawable/telefon"
         />
 
     <ImageView
@@ -59,7 +59,7 @@
         android:id="@+id/mont"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/mont"
+        android:src="@drawable/motorcycle"
         />
 
 </LinearLayout>
@@ -80,28 +80,28 @@
             android:id="@+id/gozluk"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/gozluk"
+            android:src="@drawable/book"
             />
 
         <ImageView
             android:id="@+id/canta"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:src="@drawable/canta"
+            android:src="@drawable/chair"
             />
 
         <ImageView
             android:id="@+id/sapka"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/sapka"
+            android:src="@drawable/pajamas"
             />
 
         <ImageView
             android:id="@+id/ayakkabi"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/ayakkabi"
+            android:src="@drawable/mp3"
             />
 
     </LinearLayout>
@@ -122,28 +122,28 @@
             android:id="@+id/kulaklik"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/kulaklik"
+            android:src="@drawable/ayakkabi"
             />
 
         <ImageView
             android:id="@+id/laptop"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/laptop"
+            android:src="@drawable/house"
             />
 
         <ImageView
             android:id="@+id/saat"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/saat"
+            android:src="@drawable/football"
             />
 
         <ImageView
             android:id="@+id/telefon"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/telefon"
+            android:src="@drawable/cosmetics"
             />
     </LinearLayout>
 

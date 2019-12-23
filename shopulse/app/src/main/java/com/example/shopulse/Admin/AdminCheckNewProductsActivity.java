@@ -3,6 +3,7 @@ package com.example.shopulse.Admin;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -107,11 +108,12 @@ public class   AdminCheckNewProductsActivity extends AppCompatActivity
                     @Override
                     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
                     {
-                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout, parent, false);
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_check_product_itemview, parent, false);
                         ProductViewHolder holder = new ProductViewHolder(view);
                         return holder;
                     }
                 };
+
 
         recyclerView.setAdapter(adapter);
         adapter.startListening();

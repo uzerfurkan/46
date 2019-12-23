@@ -2,6 +2,7 @@ package com.example.shopulse.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -101,6 +102,8 @@ public class SearchProductsActivity extends AppCompatActivity
                         return holder;
                     }
                 };
+        GridLayoutManager gridLayoutManager   = new GridLayoutManager(getApplicationContext(),2);
+        searchList.setLayoutManager(gridLayoutManager);
 
         searchList.setAdapter(adapter);
         adapter.startListening();

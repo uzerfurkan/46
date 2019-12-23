@@ -5,7 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Buyers.LoginActivity">
+    tools:context=".Buyers.LoginActivity"
+
+
+    >
 
     <ImageView
         android:id="@+id/login_applogo"
@@ -111,7 +114,7 @@
         android:id="@+id/admin_panel_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ben Adminim"
+        android:text="Admin Giriş"
         android:layout_alignParentEnd="true"
         android:layout_below="@id/login_btn"
         android:textColor="@color/colorPrimaryDark"

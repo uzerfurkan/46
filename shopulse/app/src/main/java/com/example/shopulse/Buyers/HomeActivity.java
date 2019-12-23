@@ -33,6 +33,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -177,7 +178,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         return holder;
                     }
                 };
-
+        GridLayoutManager gridLayoutManager   = new GridLayoutManager(getApplicationContext(),2);
+        recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);
         adapter.startListening();
 
@@ -244,6 +246,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (id == R.id.nav_categories)
         {
+            if (!type.equals("Admin"))
+            {
+                Intent intent = new Intent(HomeActivity.this, CategoryActivity.class);
+                startActivity(intent);
+            }
 
         }
 
